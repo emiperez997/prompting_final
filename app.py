@@ -42,8 +42,8 @@ def generate_history(words, limit_words):
 def main():
 
     # Si no está instalado el paquete de openai instalarlo
-    if not os.path.exists("openai"):
-        os.system("pip install openai")
+    
+    os.system("pip install openai")
 
     # Título
     st.title("Generador de historias")
