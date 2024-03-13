@@ -1,4 +1,3 @@
-from altair import limit_rows
 import streamlit as st
 from openai import OpenAI
 import dotenv
@@ -10,8 +9,6 @@ OpenAIKey = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OpenAIKey)
 
 def generate_history(words, limit_words):
-    # Usar openai para generar una historia con las palabras dadas
-
     # Generar el prompt
     prompt = f"Crea una historia con las siguientes palabras:\n{words}\n\n---\n\n"
 
@@ -41,9 +38,6 @@ def generate_history(words, limit_words):
 
 def main():
 
-    # Si no está instalado el paquete de openai instalarlo
-
-
     # Título
     st.title("Generador de historias")
 
@@ -55,7 +49,7 @@ def main():
     st.text("4. ¡Listo! Se generará una historia con las palabras dadas")
 
     # Divisor
-    st.text("---")
+    st.divider()
 
 
     st.text("Escribe algunas palabras y te ayudaré a generar una historia")
