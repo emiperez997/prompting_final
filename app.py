@@ -14,7 +14,7 @@ def generate_history(words, limit_words):
 
     # Generar la respuesta
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {
                 "role": "user",
@@ -25,7 +25,7 @@ def generate_history(words, limit_words):
     )
 
     # Obtener la respuesta
-    response = response.choices[0].message.content
+    response = response.choices[0].message
 
     # Cortar la respuesta hasta el ultimo punto
     if response:
