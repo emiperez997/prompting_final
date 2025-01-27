@@ -27,8 +27,6 @@ def generate_history(words, limit_words):
     # Obtener la respuesta
     response = response.choices[0].message.content
 
-    print(response.choices[0].message)
-
     # Cortar la respuesta hasta el ultimo punto
     if response:
         response = response.split(".")
